@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inquiry</title>
+</head>
+<body>
+        <header>
+            <nav>
+                <a href="../index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="contactus.html">Contact</a>
+            </nav>
+        </header>
+        <section>
+        <h1 style="text-align: center;">Inquiry Form</h1>
+        <form action="#" method="post">
+            <label for="name">Your Name:</label><br/>
+            <input type="text" id="name" name="name" placeholder="Tell us who you are" required>
+            <br/><br/>
+
+            <label for="order_type">Order Type:</label><br/>
+            <select id="order_type" name="order_type" required>
+                <option value="">---Select---</option>
+                <option value="delivery">Delivery</option>
+                <option value="preorder">Pre-Order</option>
+                <option value="pickup">Pick Up</option>
+            </select>
+            <br/><br/>
+
+            <label for="product">Product:</label><br/>
+            <select id="product" name="product" required>
+                <option value="">---Select---</option>
+                <option value="beef">Beef</option>
+                <option value="pork">Pork</option>
+                <option value="chicken">Chicken</option>
+                <option value="lamb">Lamb</option>
+            </select>
+            <br/><br/>
+
+            <label for="email">Email:</label><br/>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+            <br/><br/>
+
+            <label for="mobile">Your Mobile Number:</label><br/>
+            <input type="tel" id="mobile" name="mobile" placeholder="Please provide your number if applicable">
+            <br/><br/>
+
+            <label for="rating">Rating (1-5):</label><br/>
+            <input type="number" id="rating" name="rating" min="1" max="5" placeholder="Rate 1-10">
+            <br/><br/>
+
+            <button type="submit">Submit</button>
+        </form>
+    </section>
+</body>
+</html>
