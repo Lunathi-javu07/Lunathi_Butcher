@@ -4,7 +4,92 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="assets/css/style.css">
+    <style>
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #ffffff;
+            color: #222;
+        }
+
+        .menu-page {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+        }
+
+        .menu-header {
+            text-align: center;
+            margin-bottom: 30px;
+        }
+
+        .menu-header h1 {
+            color: #e7e7e7;
+            font-size: 2.5rem;
+            margin-bottom: 10px;
+        }
+
+        .menu-gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 24px;
+        }
+
+        .menu-item {
+            background: #fff;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+            text-align: center;
+        }
+
+        .menu-item img {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            display: block;
+        }
+
+        .menu-item figcaption {
+            padding: 12px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+
+        .featured-menu {
+            margin: 40px auto 0;
+            max-width: 1100px;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .featured-menu h2 {
+            margin-bottom: 20px;
+            color: #ffffff;
+        }
+
+        .home-menu-gallery {
+            margin-bottom: 20px;
+        }
+
+        .menu-link-wrap {
+            margin-top: 20px;
+        }
+
+        .menu-button {
+            display: inline-block;
+            background: #ffffff;
+            color: #fff;
+            padding: 12px 24px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .menu-button:hover {
+            background: #ffffff;
+        }
+    </style>
 </head>
 <body>
     <header>
@@ -13,16 +98,17 @@
                     <nav>
                         <a href="./index.html">Home</a>
                         <a href="pages/about.html">About</a>
+                        <a href="./pages/menu.html">Menu</a>
                         <a href="./pages/contactus.html">Contact</a>
                         <a href="pages/inquiry.html">Enquiry</a>
-                        <a href="#">Services</a>
+                        <a href="./pages/service.html">Services</a>
                     </nav>
     </header>
     <!--Main Section-->
     <main>
         <Section>
             <!--Welcome Message-->
-            <h1 style="color: blue; text-align: center;">Welcome to Lunathi_Butcher</h1>
+            <h1 style="color: red; text-align: center;">Welcome to Lunathi_Butcher</h1>
             <!--Paragraph explaining web development-->
             <p>Introduction to Lunathi's Butcher</p>
             The website for Lunathi's Butcher involves the creation, building, and maintainance of websites and web applications.
@@ -38,10 +124,30 @@
                  and the community by proving high-quality products and services.
                  </p>
             <!--Image of the business logo-->
-            <img src="assets/images/c8e1149d-b392-4080-8a21-f0a50fb7a125.jpg" alt="Lunathi's Butcher Logo" style="width:900px; height:auto;">
+            <img src="assets/images/c8e1149d-b392-4080-8a21-f0a50fb7a125.jpg" alt="Lunathi's Butcher Logo" style="width:900px; height:500px; display: block; margin: 0 auto;">
+
+            <section class="featured-menu">
+                <h2>Featured Menu</h2>
+                <div class="menu-gallery home-menu-gallery">
+                    <figure class="menu-item">
+                        <img src="assets/images/butchers-guide-cuts-meat-3.webp" alt="Premium beef cuts">
+                        <figcaption>Premium Beef Cuts</figcaption>
+                    </figure>
+                    <figure class="menu-item">
+                        <img src="assets/images/istockphoto-1127727397-1024x1024.jpg" alt="Fresh meat display">
+                        <figcaption>Fresh Meat Display</figcaption>
+                    </figure>
+                    <figure class="menu-item">
+                        <img src="assets/images/istockphoto-1315903639-1024x1024.jpg" alt="Customer favourites">
+                        <figcaption>Customer Favourites</figcaption>
+                    </figure>
+                </div>
+                <p class="menu-link-wrap">
+                    <a href="pages/menu.html" class="menu-button">View Full Menu</a>
+                </p>
+            </section>
 
         </Section>
-
     </main>
     
 </body>
