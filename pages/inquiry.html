@@ -1,62 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Inquiry</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Enquiry Form | Lunathi's Butcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-        <header>
-            <nav>
-                <a href="../index.html">Home</a>
-                <a href="about.html">About</a>
-                <a href="contactus.html">Contact</a>
-            </nav>
-        </header>
-        <section>
-        <h1 style="text-align: center;">Inquiry Form</h1>
-        <form action="#" method="post">
-            <label for="name">Your Name:</label><br/>
-            <input type="text" id="name" name="name" placeholder="Tell us who you are" required>
-            <br/><br/>
 
-            <label for="order_type">Order Type:</label><br/>
-            <select id="order_type" name="order_type" required>
-                <option value="">---Select---</option>
-                <option value="delivery">Delivery</option>
-                <option value="preorder">Pre-Order</option>
-                <option value="pickup">Pick Up</option>
-            </select>
-            <br/><br/>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../assets/images/logo-graphic.jpg" alt="Lunathi's Butcher logo" class="brand-logo">
+      <span class="brand-copy">
+        <span class="brand-name">Lunathi's</span>
+        <span class="brand-tag">Butcher &middot; Est. 2021</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html">Menu</a>
+      <a href="service.html">Services</a>
+      <a href="contactus.html">Contact</a>
+      <a href="inquiry.html" class="active">Enquiry</a>
+    </nav>
+    <a href="inquiry.html" class="btn btn-gold">Order Now</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  </div>
+</header>
 
-            <label for="product">Product:</label><br/>
-            <select id="product" name="product" required>
-                <option value="">---Select---</option>
-                <option value="beef">Beef</option>
-                <option value="pork">Pork</option>
-                <option value="chicken">Chicken</option>
-                <option value="lamb">Lamb</option>
-            </select>
-            <br/><br/>
+<main>
 
-            <label for="email">Email:</label><br/>
-            <input type="email" id="email" name="email" placeholder="Enter your email" required>
-            <br/><br/>
+  <section class="page-hero">
+    <p class="eyebrow">Get In Touch</p>
+    <h1>Enquiry Form</h1>
+    <p>We'd love to hear from you. Fill out the form below and we'll be in touch.</p>
+  </section>
 
-            <label for="amount">Amount:</label><br/>
-            <input type="amount" id="amount" name="amount" placeholder="Enter the estimated amount" required>
-            <br/><br/>
+  <section class="section">
+    <div class="container">
+      <form class="form-card" id="enquiry-form" novalidate>
 
-            <label for="mobile">Your Mobile Number:</label><br/>
-            <input type="tel" id="mobile" name="mobile" placeholder="Please provide your number if applicable">
-            <br/><br/>
+        <div class="field">
+          <label for="name">Your Name <span class="req">*</span></label>
+          <input type="text" id="name" name="name" placeholder="Tell us who you are" required>
+        </div>
 
-            <label for="rating">Rating (1-5):</label><br/>
-            <input type="number" id="rating" name="rating" min="1" max="5" placeholder="Rate 1-10">
-            <br/><br/>
+        <div class="field">
+          <label for="email">Email Address <span class="req">*</span></label>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+        </div>
 
-            <button type="submit">Submit</button>
-        </form>
-    </section>
+        <div class="field">
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" name="mobile" placeholder="Please provide your number (optional)">
+        </div>
+
+        <div class="field">
+          <label for="message">Your Message / Order Details</label>
+          <textarea id="message" name="message" placeholder="Tell us about your order, event, or enquiry..."></textarea>
+        </div>
+
+        <div class="field">
+          <label>Rate Your Experience (1&ndash;5)</label>
+          <div class="rating-row">
+            <button type="button" class="rating-btn" data-value="1">1</button>
+            <button type="button" class="rating-btn" data-value="2">2</button>
+            <button type="button" class="rating-btn" data-value="3">3</button>
+            <button type="button" class="rating-btn" data-value="4">4</button>
+            <button type="button" class="rating-btn" data-value="5">5</button>
+          </div>
+          <input type="hidden" id="rating-value" name="rating">
+        </div>
+
+        <div class="form-actions">
+          <button type="submit" class="btn btn-gold">Submit Enquiry</button>
+          <button type="button" id="clear-btn" class="btn btn-outline">Clear</button>
+        </div>
+
+        <p class="form-note" id="form-note"></p>
+      </form>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-brand-name">Lunathi's Butcher</p>
+      <p class="footer-brand-est">Est. 2021 &middot; Zwide, Gqeberha</p>
+      <p>Quality meat, honest service, and community pride &mdash; every day.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="inquiry.html">Enquiry</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li>info@LunathiButcher.com</li>
+        <li>(065) 119-9400</li>
+        <li>Mon&ndash;Sun: 9 AM &ndash; 5 PM</li>
+        <li>61 Henderson Rd, Zwide</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2024 Lunathi's Butcher. All rights reserved.</span>
+    <span>Zwide &middot; Gqeberha &middot; South Africa</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>

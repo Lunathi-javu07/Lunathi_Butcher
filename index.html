@@ -1,154 +1,162 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #222;
-        }
-
-        .menu-page {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .menu-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .menu-header h1 {
-            color: #e7e7e7;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .menu-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 24px;
-        }
-
-        .menu-item {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        .menu-item img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .menu-item figcaption {
-            padding: 12px;
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .featured-menu {
-            margin: 40px auto 0;
-            max-width: 1100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .featured-menu h2 {
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .home-menu-gallery {
-            margin-bottom: 20px;
-        }
-
-        .menu-link-wrap {
-            margin-top: 20px;
-        }
-
-        .menu-button {
-            display: inline-block;
-            background: #ffffff;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .menu-button:hover {
-            background: #ffffff;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lunathi's Butcher | Quality Meat, Every Cut</title>
+<meta name="description" content="Lunathi's Butcher — quality meat, honest service, and community pride, serving Zwide, Gqeberha since 2021.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="assets/css/style.css">
 </head>
 <body>
-    <header>
-        <!--Logo goes here-->
-         <!-- Navigation links-->
-                    <nav>
-                        <a href="./index.html">Home</a>
-                        <a href="pages/about.html">About</a>
-                        <a href="./pages/menu.html">Menu</a>
-                        <a href="./pages/contactus.html">Contact</a>
-                        <a href="pages/inquiry.html">Enquiry</a>
-                        <a href="./pages/service.html">Services</a>
-                    </nav>
-    </header>
-    <!--Main Section-->
-    <main>
-        <Section>
-            <!--Welcome Message-->
-            <h1 style="color: red; text-align: center;">Welcome to Lunathi_Butcher</h1>
-            <!--Paragraph explaining web development-->
-            <p>Introduction to Lunathi's Butcher</p>
-            The website for Lunathi's Butcher involves the creation, building, and maintainance of websites and web applications.
-            It includes features like ordering online, viewing the menu and contacting the business. The website is designed to be user-friendly.
-            <!--Paragraphy explaining the history of the business and which hoghlights its commitment-->
-            <p style="font-size: medium;">The business has been operating since 2021.The business is based in 
-                Zwide, Gqeberha and it has been a fast-growing business in the area 
-                because it offers quality meat to the locals. The business is committed to providing high-quality products and services to its customers.
-                The business has a strong reputation for its commintment to quality and customer satisfaction. The business has a team of experienced and
-                 skilled professinals who are dedicated to provinding the best possible service to its customers.
-                The business has a strong commintment to substainability and envirinmental responsibility. The business is committed to reducing its
-                 environmental impact and promoting evironmental friendly practices. The business wishes to maintain the relationship with its customers 
-                 and the community by proving high-quality products and services.
-                 </p>
-            <!--Image of the business logo-->
-            <img src="assets/images/c8e1149d-b392-4080-8a21-f0a50fb7a125.jpg" alt="Lunathi's Butcher Logo" style="width:900px; height:500px; display: block; margin: 0 auto;">
 
-            <section class="featured-menu">
-                <h2>Featured Menu</h2>
-                <div class="menu-gallery home-menu-gallery">
-                    <figure class="menu-item">
-                        <img src="assets/images/butchers-guide-cuts-meat-3.webp" alt="Premium beef cuts">
-                        <figcaption>Premium Beef Cuts</figcaption>
-                    </figure>
-                    <figure class="menu-item">
-                        <img src="assets/images/istockphoto-1127727397-1024x1024.jpg" alt="Fresh meat display">
-                        <figcaption>Fresh Meat Display</figcaption>
-                    </figure>
-                    <figure class="menu-item">
-                        <img src="assets/images/istockphoto-1315903639-1024x1024.jpg" alt="Customer favourites">
-                        <figcaption>Customer Favourites</figcaption>
-                    </figure>
-                </div>
-                <p class="menu-link-wrap">
-                    <a href="pages/menu.html" class="menu-button">View Full Menu</a>
-                </p>
-            </section>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="index.html" class="brand">
+      <img src="assets/images/logo-graphic.jpg" alt="Lunathi's Butcher logo" class="brand-logo">
+      <span class="brand-copy">
+        <span class="brand-name">Lunathi's</span>
+        <span class="brand-tag">Butcher &middot; Est. 2021</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="index.html" class="active">Home</a>
+      <a href="pages/about.html">About</a>
+      <a href="pages/menu.html">Menu</a>
+      <a href="pages/service.html">Services</a>
+      <a href="pages/contactus.html">Contact</a>
+      <a href="pages/inquiry.html">Enquiry</a>
+    </nav>
+    <a href="pages/inquiry.html" class="btn btn-gold">Order Now</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  </div>
+</header>
 
-        </Section>
-    </main>
-    
+<main>
+
+  <!-- Hero -->
+  <section class="home-hero">
+    <div class="container">
+      <div class="hero-text">
+        <p class="kicker">Zwide &middot; Gqeberha &middot; Est. 2021</p>
+        <h1>Quality Meat,<br><em>Every Cut.</em></h1>
+        <p class="lede">Lunathi's Butcher has been serving the Zwide community since 2021 &mdash; delivering premium cuts, custom orders, and honest service from the heart of Gqeberha.</p>
+        <div class="hero-actions">
+          <a href="pages/menu.html" class="btn btn-gold">View Our Menu</a>
+          <a href="pages/contactus.html" class="btn btn-outline">Contact Us</a>
+        </div>
+      </div>
+      <div class="hero-media">
+        <div class="ph ph-1 ph-tall"></div>
+        <div class="badge-years">
+          <span class="num">4+</span>
+          <span class="label">Years Serving</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Stats bar -->
+  <section class="stats-bar">
+    <div class="container">
+      <div>
+        <div class="stat-num">2021</div>
+        <div class="stat-label">Established</div>
+      </div>
+      <div>
+        <div class="stat-num">Mon&ndash;Sun</div>
+        <div class="stat-label">9 AM &ndash; 5 PM</div>
+      </div>
+      <div>
+        <div class="stat-num">Zwide</div>
+        <div class="stat-label">Gqeberha</div>
+      </div>
+      <div>
+        <div class="stat-num">Bulk</div>
+        <div class="stat-label">Orders Welcome</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- The Lunathi Difference -->
+  <section class="section">
+    <div class="container">
+      <div class="section-head">
+        <p class="eyebrow">Why Choose Us</p>
+        <h2>The Lunathi Difference</h2>
+        <p>We are more than a butchery &mdash; we are part of the Zwide community.</p>
+      </div>
+      <div class="grid-4">
+        <div class="card">
+          
+          <h3>Premium Quality</h3>
+          <p>Every cut is sourced from trusted, reliable local farmers and suppliers.</p>
+        </div>
+        <div class="card">
+          
+          <h3>Custom Cuts</h3>
+          <p>Tell us exactly what you need &mdash; we cut and package to your specification.</p>
+        </div>
+        <div class="card">
+          
+          <h3>Delivery Service</h3>
+          <p>Order ahead and we'll bring fresh meat straight to your door.</p>
+        </div>
+        <div class="card">
+          
+          <h3>Community First</h3>
+          <p>We create jobs and share skills with the people of Zwide.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bulk order CTA -->
+  <section class="cta-photo">
+    <div class="container">
+      <h2>Ready to Place a Bulk Order?</h2>
+      <p>Special discounts available for large orders. Get in touch and we'll sort you out.</p>
+      <a href="pages/inquiry.html" class="btn btn-gold">Make an Enquiry</a>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-brand-name">Lunathi's Butcher</p>
+      <p class="footer-brand-est">Est. 2021 &middot; Zwide, Gqeberha</p>
+      <p>Quality meat, honest service, and community pride &mdash; every day.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="pages/about.html">About</a></li>
+        <li><a href="pages/menu.html">Menu</a></li>
+        <li><a href="pages/service.html">Services</a></li>
+        <li><a href="pages/contactus.html">Contact</a></li>
+        <li><a href="pages/inquiry.html">Enquiry</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li>info@LunathiButcher.com</li>
+        <li>(065) 119-9400</li>
+        <li>Mon&ndash;Sun: 9 AM &ndash; 5 PM</li>
+        <li>61 Henderson Rd, Zwide</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2024 Lunathi's Butcher. All rights reserved.</span>
+    <span>Zwide &middot; Gqeberha &middot; South Africa</span>
+  </div>
+</footer>
+
+<script src="assets/js/main.js"></script>
 </body>
 </html>

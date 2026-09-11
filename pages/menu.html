@@ -1,128 +1,160 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lunathi's Butcher Menu</title>
-    <style>
-        body {
-            margin: 0;
-            font-family: Arial, sans-serif;
-            background: #ffffff;
-            color: #222;
-        }
-
-        .menu-page {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 40px 20px;
-        }
-
-        .menu-header {
-            text-align: center;
-            margin-bottom: 30px;
-        }
-
-        .menu-header h1 {
-            color: #000000;
-            font-size: 2.5rem;
-            margin-bottom: 10px;
-        }
-
-        .menu-gallery {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-            gap: 24px;
-        }
-
-        .menu-item {
-            background: #fff;
-            border-radius: 12px;
-            overflow: hidden;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-            text-align: center;
-        }
-
-        .menu-item img {
-            width: 100%;
-            height: 240px;
-            object-fit: cover;
-            display: block;
-        }
-
-        .menu-item figcaption {
-            padding: 12px;
-            font-weight: bold;
-            color: #ffffff;
-        }
-
-        .featured-menu {
-            margin: 40px auto 0;
-            max-width: 1100px;
-            padding: 20px;
-            text-align: center;
-        }
-
-        .featured-menu h2 {
-            margin-bottom: 20px;
-            color: #ffffff;
-        }
-
-        .home-menu-gallery {
-            margin-bottom: 20px;
-        }
-
-        .menu-link-wrap {
-            margin-top: 20px;
-        }
-
-        .menu-button {
-            display: inline-block;
-            background: #ffffff;
-            color: #fff;
-            padding: 12px 24px;
-            border-radius: 8px;
-            text-decoration: none;
-            font-weight: bold;
-        }
-
-        .menu-button:hover {
-            background: #ffffff;
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Menu | Lunathi's Butcher</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="../assets/css/style.css">
 </head>
 <body>
-    <main class="menu-page">
-        <section>
 
-        </section>
-         class="menu-header">
-            <h1>Our Menu</h1>
-            <p>Fresh meat, quality cuts, and customer favourites.</p>
-        </section>
+<header class="site-header">
+  <div class="nav-wrap">
+    <a href="../index.html" class="brand">
+      <img src="../assets/images/logo-graphic.jpg" alt="Lunathi's Butcher logo" class="brand-logo">
+      <span class="brand-copy">
+        <span class="brand-name">Lunathi's</span>
+        <span class="brand-tag">Butcher &middot; Est. 2021</span>
+      </span>
+    </a>
+    <nav class="main-nav">
+      <a href="../index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="menu.html" class="active">Menu</a>
+      <a href="service.html">Services</a>
+      <a href="contactus.html">Contact</a>
+      <a href="inquiry.html">Enquiry</a>
+    </nav>
+    <a href="inquiry.html" class="btn btn-gold">Order Now</a>
+    <button class="nav-toggle" aria-label="Toggle navigation">&#9776;</button>
+  </div>
+</header>
 
-        <section
-         class="menu-gallery">
-            <figure class="menu-item">
-                <img src="../assets/images/butchers-guide-cuts-meat-3.webp" alt="Premium beef cuts">
-                <figcaption>Premium Beef Cuts</figcaption>
-            </figure>
+<main>
 
-            <figure class="menu-item">
-                <img src="../assets/images/c8e1149d-b392-4080-8a21-f0a50fb7a125.jpg" alt="Fresh meat selection">
-                <figcaption>Fresh Meat Selection</figcaption>
-            </figure>
+  <section class="page-hero">
+    <p class="eyebrow">Fresh Daily</p>
+    <h1>Our Menu</h1>
+    <p>Quality cuts and customer favourites.</p>
+  </section>
 
-            <figure class="menu-item">
-                <img src="../assets/images/istockphoto-1127727397-1024x1024.jpg" alt="Butcher shop display">
-                <figcaption>Butcher Shop Display</figcaption>
-            </figure>
+  <section class="section">
+    <div class="container">
 
-            <figure class="menu-item">
-                <img src="../assets/images/istockphoto-1315903639-1024x1024.jpg" alt="Customer favourite cuts">
-                <figcaption>Customer Favourites</figcaption>
-            </figure>
-        </section>
-    </main>
+      <div class="filter-tabs">
+        <button class="filter-tab active" data-filter="all">All</button>
+        <button class="filter-tab" data-filter="beef">Beef</button>
+        <button class="filter-tab" data-filter="pork">Pork</button>
+        <button class="filter-tab" data-filter="poultry">Poultry</button>
+        <button class="filter-tab" data-filter="lamb">Lamb</button>
+        <button class="filter-tab" data-filter="house-made">House-made</button>
+        <button class="filter-tab" data-filter="bestseller">Bestseller</button>
+      </div>
+
+      <div class="menu-grid">
+
+        <article class="menu-card" data-tags="beef">
+          <div class="ph ph-1"></div>
+          <div class="menu-card-body">
+            <span class="tag">Beef</span>
+            <h3>Premium Beef Cuts</h3>
+            <p>Sirloin, rump, and rib-eye cut fresh from trusted local suppliers.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-tags="beef bestseller">
+          <div class="ph ph-2"></div>
+          <div class="menu-card-body">
+            <span class="tag">Bestseller</span>
+            <h3>Braai Packs</h3>
+            <p>A mixed selection ready for the fire &mdash; a customer favourite every weekend.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-tags="house-made">
+          <div class="ph ph-3"></div>
+          <div class="menu-card-body">
+            <span class="tag">House-made</span>
+            <h3>Signature Sausages</h3>
+            <p>Our own recipe boerewors and sausages, made fresh in-house.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-tags="pork">
+          <div class="ph ph-4"></div>
+          <div class="menu-card-body">
+            <span class="tag">Pork</span>
+            <h3>Pork Selection</h3>
+            <p>Chops, ribs, belly, and trotters from quality local pork suppliers.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-tags="poultry">
+          <div class="ph ph-chicken"></div>
+          <div class="menu-card-body">
+            <span class="tag">Poultry</span>
+            <h3>Chicken Range</h3>
+            <p>Whole chickens, portions, and wings &mdash; fresh, never frozen.</p>
+          </div>
+        </article>
+
+        <article class="menu-card" data-tags="lamb">
+          <div class="ph ph-2"></div>
+          <div class="menu-card-body">
+            <span class="tag">Lamb</span>
+            <h3>Lamb &amp; Mutton</h3>
+            <p>Leg, shoulder, and chops sourced from trusted Karoo suppliers.</p>
+          </div>
+        </article>
+
+      </div>
+
+      <div class="text-center" style="margin-top:48px;">
+        <p style="color:var(--text-muted); margin-bottom:20px;">Want a custom order or bulk buy? We've got you covered.</p>
+        <a href="inquiry.html" class="btn btn-gold">Place a Custom Order</a>
+      </div>
+
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <div class="footer-grid">
+    <div>
+      <p class="footer-brand-name">Lunathi's Butcher</p>
+      <p class="footer-brand-est">Est. 2021 &middot; Zwide, Gqeberha</p>
+      <p>Quality meat, honest service, and community pride &mdash; every day.</p>
+    </div>
+    <div>
+      <h4>Navigation</h4>
+      <ul class="footer-links">
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="menu.html">Menu</a></li>
+        <li><a href="service.html">Services</a></li>
+        <li><a href="contactus.html">Contact</a></li>
+        <li><a href="inquiry.html">Enquiry</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4>Contact</h4>
+      <ul class="footer-contact">
+        <li>info@LunathiButcher.com</li>
+        <li>(065) 119-9400</li>
+        <li>Mon&ndash;Sun: 9 AM &ndash; 5 PM</li>
+        <li>61 Henderson Rd, Zwide</li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <span>&copy; 2024 Lunathi's Butcher. All rights reserved.</span>
+    <span>Zwide &middot; Gqeberha &middot; South Africa</span>
+  </div>
+</footer>
+
+<script src="../assets/js/main.js"></script>
 </body>
 </html>
