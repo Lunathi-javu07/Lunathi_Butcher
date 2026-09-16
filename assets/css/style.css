@@ -833,7 +833,8 @@ a { color: inherit; }
 
 /* ---------------- Responsive ---------------- */
 
-@media (max-width: 900px) {
+/* Large tablet / small desktop */
+@media (max-width: 1024px) {
   .home-hero .container { grid-template-columns: 1fr; }
   .badge-years { right: 10px; bottom: -18px; }
   .grid-4 { grid-template-columns: repeat(2, 1fr); }
@@ -847,7 +848,8 @@ a { color: inherit; }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-@media (max-width: 720px) {
+/* Mobile (small phones & tablets under 768px) */
+@media (max-width: 767px) {
   .main-nav { display: none; }
   .nav-toggle { display: inline-block; }
   .site-header.nav-open .main-nav {
@@ -870,3 +872,57 @@ a { color: inherit; }
   .rating-row { flex-wrap: wrap; }
   .form-actions { flex-direction: column; }
 }
+
+/* ---------------- Responsive tweaks & fluid type ---------------- */
+
+/* Fluid headings */
+h1 { font-size: clamp(1.5rem, 4vw, 3rem); }
+h2 { font-size: clamp(1.125rem, 3.2vw, 2rem); }
+
+/* Small tablets / large phones */
+@media (max-width: 678px) {
+  .container { padding: 0 16px; }
+  .grid-4 { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  .brand .brand-name { font-size: 1.25rem; }
+  .hero-text { padding-bottom: 20px; }
+  .hero-media .badge-years { right: 18px; }
+}
+
+/* Tablet (medium devices) */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .container { padding: 0 20px; }
+  .grid-4 { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .grid-3 { grid-template-columns: repeat(2, 1fr); }
+  .menu-grid { grid-template-columns: repeat(3, 1fr); gap: 20px; }
+  .brand .brand-name { font-size: 1.35rem; }
+  .main-nav { gap: 20px; }
+  .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 24px; }
+  .stats-bar .container { grid-template-columns: repeat(4, 1fr); }
+}
+
+/* Desktop (large devices) */
+@media (min-width: 1025px) {
+  .container { padding: 0 24px; }
+  .grid-4 { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .grid-3 { grid-template-columns: repeat(3, 1fr); }
+  .menu-grid { grid-template-columns: repeat(4, 1fr); gap: 24px; }
+  .brand .brand-name { font-size: 1.5rem; }
+  .main-nav { gap: 28px; }
+  .footer-grid { grid-template-columns: repeat(3, 1fr); gap: 28px; }
+  .stats-bar .container { grid-template-columns: repeat(4, 1fr); }
+  .nav-toggle { display: none; }
+  .site-header.nav-open .main-nav { display: flex; position: static; flex-direction: row; background: none; padding: 0; border: none; }
+}
+
+/* Small phones */
+@media (max-width: 320px) {
+  .container { padding: 0 12px; }
+  .grid-4 { grid-template-columns: 1fr; gap: 12px; }
+  .brand .brand-name { font-size: 1.05rem; }
+  .hero-text h1 { font-size: 1.4rem; line-height: 1.2; }
+  .hero-media { display: none; }
+}
+
+/* Utility: make images responsive and use lazy loading (HTML attr) */
+img { max-width: 100%; height: auto; display: block; }
+
