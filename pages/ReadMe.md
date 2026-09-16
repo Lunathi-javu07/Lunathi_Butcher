@@ -140,7 +140,7 @@ It shows simple website structure, styling, and useful information of the Butche
     ./Assets/image678px
     
 ## Improvements from part 2 feedbaCK
-    Refrence is provide in ReadMe file
+    Refrencing is provided in ReadMe file
     Added more content to the website
 ## PART3 CHANGELOG
     
