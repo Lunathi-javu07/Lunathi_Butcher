@@ -1,10 +1,19 @@
 document.addEventListener('DOMContentLoaded', () => {
   const navToggle = document.querySelector('.nav-toggle');
+  const siteHeader = document.querySelector('.site-header');
   const mainNav = document.querySelector('.main-nav');
 
-  if (navToggle && mainNav) {
+  if (navToggle && siteHeader && mainNav) {
     navToggle.addEventListener('click', () => {
-      mainNav.classList.toggle('open');
+      siteHeader.classList.toggle('nav-open');
+    });
+
+    // Close the menu after tapping a link, so it doesn't stay open
+    // when navigating to the next page on mobile.
+    mainNav.querySelectorAll('a').forEach((link) => {
+      link.addEventListener('click', () => {
+        siteHeader.classList.remove('nav-open');
+      });
     });
   }
 
@@ -85,3 +94,4 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+ 
