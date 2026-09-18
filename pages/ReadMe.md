@@ -166,6 +166,8 @@ It shows simple website structure, styling, and useful information of the Butche
     W3Schools. (2026, September 12). W3Schools. Accessed from W3Schools: https://www.w3schools.com/cssref/pr_class_cursor.php
 
     Schools, W. (2026, September 16). W3 SCHOOLS. Accessed from W3 SCHOOLS: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
+    
+    GeeksForGeeks(2026, Septermber 17). GekksForGeeks. Accessed from GeeksForGeeks: https://www.geeksforgeeks.org/css/difference-between-html-and-css/
 
     Lunathi Javu (2026, September 16). 
 
