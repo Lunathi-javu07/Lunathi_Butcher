@@ -161,6 +161,10 @@ It shows simple website structure, styling, and useful information of the Butche
     Added a feedback functionality for the form submission.
     Applied a proper css layout for the enquiry form.
 
+## Mobile
+<img width="325" height="811" alt="Mobile" src="https://github.com/user-attachments/assets/0f3059b3-970b-47f6-96af-7a7722862546" />
+
+
 
 ## REFERENCES
     W3Schools. (2026, September 12). W3Schools. Accessed from W3Schools: https://www.w3schools.com/cssref/pr_class_cursor.php
