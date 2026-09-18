@@ -116,7 +116,109 @@
         <li><a href="contactus.html">Contact</a></li>
         <li><a href="inquiry.html">Enquiry</a></li>
       </ul>
-    </div>
+    </div>    // ...existing code...
+    
+    /* ---------------- Header / Nav (mobile-first rewrite) ---------------- */
+    
+    .nav-wrap {
+      max-width: var(--max-width);
+      margin: 0 auto;
+      padding: 12px 16px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 12px;
+      position: relative;
+    }
+    
+    /* show toggle by default (mobile) */
+    .nav-toggle {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      background: none;
+      border: 1px solid var(--border-soft);
+      color: var(--cream);
+      font-size: 1.15rem;
+      padding: 8px 10px;
+      border-radius: var(--radius);
+      cursor: pointer;
+      z-index: 110;
+    }
+    
+    /* hide desktop nav by default and make it a stacked panel when opened */
+    .main-nav {
+      display: none;
+      flex-direction: column;
+      gap: 6px;
+      padding: 12px 16px;
+      background: var(--bg-darkest);
+      border-top: 1px solid var(--border-soft);
+      position: absolute;
+      left: 0;
+      right: 0;
+      top: 100%;
+      z-index: 100;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.45);
+    }
+    
+    /* when JS toggles a page-level class (e.g. .nav-open) show the menu */
+    .nav-open .main-nav {
+      display: flex;
+    }
+    
+    /* larger, touch-friendly links for mobile */
+    .main-nav a {
+      text-decoration: none;
+      color: var(--cream);
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 12px 8px;
+      border-bottom: 1px solid transparent;
+      transition: color 0.15s ease, border-color 0.15s ease;
+      display: block;
+      width: 100%;
+    }
+    
+    .main-nav a:hover {
+      color: var(--gold-light);
+      background: rgba(255,255,255,0.01);
+    }
+    
+    /* restore desktop layout at tablet/desktop sizes */
+    @media (min-width: 768px) {
+      .nav-toggle { display: none; }
+    
+      .nav-wrap { padding: 16px 24px; }
+    
+      .main-nav {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        gap: 28px;
+        align-items: center;
+        justify-content: center;
+        background: transparent;
+        border-top: none;
+        padding: 0;
+        box-shadow: none;
+      }
+    
+      .main-nav a {
+        padding: 0;
+        font-size: 0.95rem;
+        white-space: nowrap;
+        border-bottom: 2px solid transparent;
+      }
+    }
+    
+    /* ensure large desktop still behaves */
+    @media (min-width: 1025px) {
+      .nav-wrap { padding: 16px 24px; }
+      .main-nav { gap: 28px; }
+    }
+    
+    // ...existing code...
     <div>
       <h4>Contact</h4>
       <ul class="footer-contact">
