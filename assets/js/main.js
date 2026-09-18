@@ -8,7 +8,7 @@ document.addEventListener('DOMContentLoaded', () => {
       siteHeader.classList.toggle('nav-open');
     });
 
-    // Close the menu after tapping a link, so it doesn't stay open
+    // Close the menu after tapping a link, so it doesn't stay open,
     // when navigating to the next page on mobile.
     mainNav.querySelectorAll('a').forEach((link) => {
       link.addEventListener('click', () => {
