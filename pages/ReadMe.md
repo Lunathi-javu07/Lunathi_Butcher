@@ -161,12 +161,6 @@ It shows simple website structure, styling, and useful information of the Butche
     Added a feedback functionality for the form submission.
     Applied a proper css layout for the enquiry form.
 
-    How it on different devices:
-
-    Moobile
-    
-
-
 
 ## REFERENCES
     W3Schools. (2026, September 12). W3Schools. Accessed from W3Schools: https://www.w3schools.com/cssref/pr_class_cursor.php
