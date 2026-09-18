@@ -847,7 +847,7 @@ a { color: inherit; }
 
 /* ---------------- Responsive (mobile-first) ---------------- */
 
-/* Base (mobile) — provide compact defaults for small screens */
+/* mobile — provide compact defaults for small screens */
 .container { padding: 0 16px; }
 .main-nav { display: none; }
 .nav-toggle { display: inline-block; }
@@ -858,7 +858,7 @@ a { color: inherit; }
 .rating-row { flex-wrap: wrap; }
 .form-actions { flex-direction: column; }
 
-/* Site header: mobile dropdown behaviour (applies to mobile by default) */
+/* Site header: mobile dropdown behaviour  */
 .site-header.nav-open .main-nav {
   display: flex;
   flex-direction: column;
@@ -903,7 +903,7 @@ h2 { font-size: clamp(1.125rem, 3.2vw, 2rem); }
   .footer-grid { grid-template-columns: 1fr 1fr; }
 }
 
-/* Desktop and up */
+/* Desktop */
 @media (min-width: 1025px) {
   .container { padding: 0 24px; }
   .grid-4 { grid-template-columns: repeat(4, 1fr); gap: 24px; }
@@ -917,7 +917,7 @@ h2 { font-size: clamp(1.125rem, 3.2vw, 2rem); }
 }
 
 
-/* Utility: make images responsive and use lazy loading  */
+/* Utility: make images responsive */
 img { max-width: 100%; height: auto; display: block; }
 
  
