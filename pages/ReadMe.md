@@ -164,6 +164,10 @@ It shows simple website structure, styling, and useful information of the Butche
 ## Mobile
 <img width="325" height="811" alt="Mobile" src="https://github.com/user-attachments/assets/0f3059b3-970b-47f6-96af-7a7722862546" />
 
+## Tablet
+<img width="764" height="810" alt="Tablet" src="https://github.com/user-attachments/assets/d7ffc7c8-45bc-4a98-9afd-e78c78a771dd" />
+
+
 
 
 ## REFERENCES
