@@ -876,14 +876,14 @@ a { color: inherit; }
 h1 { font-size: clamp(1.5rem, 4vw, 3rem); }
 h2 { font-size: clamp(1.125rem, 3.2vw, 2rem); }
 
-/* Small phones tweaks */
+/* Small phones  */
 @media (max-width: 360px) {
   .container { padding: 0 12px; }
   .brand .brand-name { font-size: 1.05rem; }
   .hero-text h1 { font-size: 1.4rem; line-height: 1.2; }
 }
 
-/* Tablet and up */
+/* Tablet */
 @media (min-width: 768px) {
   .container { padding: 0 20px; }
   .nav-toggle { display: none; }
@@ -917,7 +917,7 @@ h2 { font-size: clamp(1.125rem, 3.2vw, 2rem); }
 }
 
 
-/* Utility: make images responsive and use lazy loading (HTML attr) */
+/* Utility: make images responsive and use lazy loading  */
 img { max-width: 100%; height: auto; display: block; }
 
  
