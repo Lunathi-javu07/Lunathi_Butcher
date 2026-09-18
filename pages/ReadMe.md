@@ -170,5 +170,6 @@ It shows simple website structure, styling, and useful information of the Butche
     GeeksForGeeks(2026, Septermber 17). GekksForGeeks. Accessed from GeeksForGeeks: https://www.geeksforgeeks.org/css/difference-between-html-and-css/
 
     Lunathi Javu (2026, September 16). 
-
+    
+    Used Visual studio to correct my mistakes.
  
