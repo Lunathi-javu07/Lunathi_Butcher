@@ -180,6 +180,17 @@ a { color: inherit; }
   padding: 6px 12px;
   border-radius: var(--radius);
   cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.nav-toggle:focus,
+.nav-toggle:focus-visible {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+.nav-toggle:active {
+  background: var(--bg-card);
 }
 
 /* ---------------- Hero (page header banner) ---------------- */
@@ -909,3 +920,4 @@ h2 { font-size: clamp(1.125rem, 3.2vw, 2rem); }
 /* Utility: make images responsive and use lazy loading (HTML attr) */
 img { max-width: 100%; height: auto; display: block; }
 
+ 
