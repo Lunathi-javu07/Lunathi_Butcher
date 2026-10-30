@@ -7,6 +7,8 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;1,600&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="../assets/css/style.css">
+<meta name="description" content="Send an enquiry to Lunathi's Butcher for bulk orders, custom cuts, delivery or event catering in Zwide, Gqeberha.">
+<meta name="keywords" content="butcher enquiry, bulk meat order, custom cuts enquiry, meat delivery Zwide, event catering Gqeberha">
 </head>
 <body>
 
@@ -46,26 +48,61 @@
 
         <div class="field">
           <label for="name">Your Name <span class="req">*</span></label>
-          <input type="text" id="name" name="name" placeholder="Tell us who you are" required>
+          <input type="text" id="name" name="name" placeholder="Tell us who you are" autocomplete="name" required>
         </div>
 
         <div class="field">
           <label for="email">Email Address <span class="req">*</span></label>
-          <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+          <input type="email" id="email" name="email" placeholder="Enter your email address" autocomplete="email" required>
         </div>
 
         <div class="field">
           <label for="mobile">Mobile Number</label>
-          <input type="tel" id="mobile" name="mobile" placeholder="Please provide your number (optional)">
+          <input type="tel" id="mobile" name="mobile" placeholder="e.g. 065 119 9400 (optional)" autocomplete="tel">
         </div>
 
         <div class="field">
-          <label for="message">Your Message / Order Details</label>
-          <textarea id="message" name="message" placeholder="Tell us about your order, event, or enquiry..."></textarea>
+          <label for="enquiry-type">Enquiry Type <span class="req">*</span></label>
+          <select id="enquiry-type" name="enquiry-type" required>
+            <option value="">-- Please choose --</option>
+            <option>General question</option>
+            <option>Bulk order</option>
+            <option>Event or funeral catering</option>
+            <option>Custom cuts and packaging</option>
+            <option>Delivery</option>
+            <option>Feedback</option>
+          </select>
+        </div>
+
+        <fieldset class="field">
+          <legend>Products You Are Interested In</legend>
+          <label class="choice"><input type="checkbox" name="products" value="Beef"> Beef</label>
+          <label class="choice"><input type="checkbox" name="products" value="Lamb and mutton"> Lamb &amp; mutton</label>
+          <label class="choice"><input type="checkbox" name="products" value="Pork"> Pork</label>
+          <label class="choice"><input type="checkbox" name="products" value="Chicken"> Chicken</label>
+          <label class="choice"><input type="checkbox" name="products" value="Braai packs"> Braai packs</label>
+          <label class="choice"><input type="checkbox" name="products" value="Sausages"> Sausages</label>
+        </fieldset>
+
+        <fieldset class="field">
+          <legend>Preferred Contact Method <span class="req">*</span></legend>
+          <label class="choice"><input type="radio" name="contact-method" value="Email"> Email</label>
+          <label class="choice"><input type="radio" name="contact-method" value="Phone call"> Phone call</label>
+          <label class="choice"><input type="radio" name="contact-method" value="WhatsApp"> WhatsApp</label>
+        </fieldset>
+
+        <div class="field">
+          <label for="needed-by">Date Needed (optional)</label>
+          <input type="date" id="needed-by" name="needed-by">
         </div>
 
         <div class="field">
-          <label>Rate Your Experience (1&ndash;5)</label>
+          <label for="message">Your Message / Order Details <span class="req">*</span></label>
+          <textarea id="message" name="message" placeholder="Tell us about your order, event, or enquiry..." required></textarea>
+        </div>
+
+        <div class="field">
+          <label>Rate Your Experience (1&ndash;5, optional)</label>
           <div class="rating-row">
             <button type="button" class="rating-btn" data-value="1">1</button>
             <button type="button" class="rating-btn" data-value="2">2</button>
@@ -76,13 +113,25 @@
           <input type="hidden" id="rating-value" name="rating">
         </div>
 
+        <div class="field">
+          <label class="choice"><input type="checkbox" id="consent" name="consent"> I agree to be contacted about this enquiry. <span class="req">*</span></label>
+        </div>
+
         <div class="form-actions">
           <button type="submit" class="btn btn-gold">Submit Enquiry</button>
           <button type="button" id="clear-btn" class="btn btn-outline">Clear</button>
         </div>
 
-        <p class="form-note" id="form-note"></p>
+        <p class="form-note" id="form-note" role="status" aria-live="polite"></p>
       </form>
+
+      <div class="form-success" id="form-success" tabindex="-1" hidden>
+        <h2>Thank you, your enquiry is ready to send</h2>
+        <p>Your email app has opened with your message ready. <strong>Press Send there</strong> to deliver it to us. Your reference number is <span class="ref-number"></span>.</p>
+        <dl class="summary-list"></dl>
+        <p>Email app did not open? <a class="resend-link" href="#">Open it again</a> or email us at info@LunathiButcher.com.</p>
+        <button type="button" class="btn btn-outline another-btn">Send another enquiry</button>
+      </div>
     </div>
   </section>
 
@@ -117,8 +166,8 @@
     </div>
   </div>
   <div class="footer-bottom">
-    <span>&copy; 2024 Lunathi's Butcher. All rights reserved.</span>
-    <span>Zwide &middot; Gqeberha &middot; South Africa</span>
+    <span>&copy; <span id="year">2026</span> Lunathi's Butcher. All rights reserved.</span>
+    <span class="footer-datetime" id="footer-datetime"></span>
   </div>
 </footer>
 
