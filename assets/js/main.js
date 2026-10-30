@@ -158,7 +158,7 @@ function initLightbox() {
   const images = Array.from(document.querySelectorAll('main img'));
   if (!images.length) return;
 
-  // Build the lightbox once and add it to the page.
+  // Creating a lightbox once and adding it to the page.
   const box = document.createElement('div');
   box.id = 'lightbox';
   box.hidden = true;
@@ -176,7 +176,7 @@ function initLightbox() {
   const caption = box.querySelector('figcaption');
   const closeBtn = box.querySelector('.lb-close');
   let current = 0;
-  let opener = null; // remembers what had focus so we can give it back
+  let opener = null; 
 
   const show = (index) => {
     current = (index + images.length) % images.length; // wraps around at both ends
@@ -209,7 +209,7 @@ function initLightbox() {
   closeBtn.addEventListener('click', close);
   box.querySelector('.lb-prev').addEventListener('click', (e) => { e.stopPropagation(); show(current - 1); });
   box.querySelector('.lb-next').addEventListener('click', (e) => { e.stopPropagation(); show(current + 1); });
-  box.addEventListener('click', (e) => { if (e.target === box) close(); }); // click on the dark backdrop
+  box.addEventListener('click', (e) => { if (e.target === box) close(); }); // only click on the dark backdrop
 
   document.addEventListener('keydown', (e) => {
     if (box.hidden) return;
@@ -242,11 +242,11 @@ function initRating() {
 
 /* --------------------------------------------------------------------------
    7. Form validation and processing
-   Each form is described by a list of rules. On submit every field is
+   Each form is described by a list of rules. Only submits when every field is
    checked, an error message appears under each field that is wrong, and
    the first wrong field receives focus. When everything is valid the
    message is saved, the visitor's email app opens with the message ready
-   to send to the business, and a confirmation panel summarises it.
+   to send to the business, and a confirmation panel summarises the inputs of the user.
    -------------------------------------------------------------------------- */
 
 // Patterns
