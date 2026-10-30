@@ -175,13 +175,27 @@ It shows simple website structure, styling, and useful information of the Butche
 
 
 ## REFERENCES
-    W3Schools. (2026, September 12). W3Schools. Accessed from W3Schools: https://www.w3schools.com/cssref/pr_class_cursor.php
+GeeksforGeeks (2026) *Difference between HTML and CSS*. Available at: https://www.geeksforgeeks.org/css/difference-between-html-and-css/ (Accessed: [30 October 2026]).
 
-    Schools, W. (2026, September 16). W3 SCHOOLS. Accessed from W3 SCHOOLS: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
-    
-    GeeksForGeeks(2026, Septermber 17). GekksForGeeks. Accessed from GeeksForGeeks: https://www.geeksforgeeks.org/css/difference-between-html-and-css/
+Google (2026) *Google Fonts: Inter and Playfair Display*. Available at: https://fonts.google.com (Accessed:30 October 2026).
 
-    Lunathi Javu (2026, September 16). 
+Google (2026) *Google Maps Embed*. Available at: https://www.google.com/maps (Accessed: [30 October 2026]).
+
+Javu, L. (2026) *Lunathi's Butcher website: design and code*. Developed in Visual Studio Code.
+
+Mozilla Developer Network (2026) *Client-side form validation*. Available at: https://developer.mozilla.org/en-US/docs/Learn_web_development/Extensions/Forms/Form_validation (Accessed: [30 October 2026]).
+
+W3Schools (2026) *CSS cursor property*. Available at: https://www.w3schools.com/cssref/pr_class_cursor.php (Accessed: 12 September 2026).
+
+W3Schools (2026) "How to create a mobile navigation menu". Available at: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp (Accessed: 16 September 2026).
+
+W3Schools. (2026, September 12). W3Schools. Accessed from W3Schools: https://www.w3schools.com/cssref/pr_class_cursor.php
+
+W3Schools, W. (2026, September 16). W3 SCHOOLS. Accessed from W3 SCHOOLS: https://www.w3schools.com/howto/howto_js_mobile_navbar.asp
     
-    Used Visual studio to correct my mistakes.
+GeeksForGeeks(2026, Septermber 17). GekksForGeeks. Accessed from GeeksForGeeks: https://www.geeksforgeeks.org/css/difference-between-html-and-css/
+
+Lunathi Javu (2026, September 16). 
+    
+Used Visual studio to correct my mistakes.
  
