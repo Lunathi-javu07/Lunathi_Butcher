@@ -17,6 +17,23 @@ It shows simple website structure, styling, and useful information of the Butche
     
     JavaScript form validation and interactive menu filtering
 
+    Responsive layout for mobile, tablet and desktop, with a hamburger menu on small screens
+
+    Interactive elements: hamburger menu, menu category filter, rating buttons
+
+    Menu search: live search combined with the category filter
+
+    Interactive map: Google Map of 61 Henderson Road, Zwide
+
+    Gallery lightbox: click any picture to enlarge it; arrow keys, X button and Escape supported
+
+    Dynamic content:today's date and an open/closed badge on the home page; live date and time stamp and automatic year in every footer
+
+    Forms: contact and enquiry forms with dropdowns, checkboxes, radio buttons and a date picker; per-field validation 
+
+    SEO: unique title, description and keywords on each page; descriptive image file names and alt text
+
+
 ## Responsive Breakpoints
 
     Mobile (320px – 767px):
