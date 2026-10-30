@@ -150,9 +150,9 @@ function initMenuFilterAndSearch() {
 
 /* --------------------------------------------------------------------------
    5. Gallery lightbox
-   Click any picture inside <main> to view it enlarged. Close with the X
-   button, a click outside the picture, or Escape. Left/right arrow keys
-   (or the arrow buttons) move between the pictures on the page.
+   Click any picture inside <main> to view it. Close with the X
+   button, a click outside the picture. Left/right arrow keys
+   move between the pictures on the page.
    -------------------------------------------------------------------------- */
 function initLightbox() {
   const images = Array.from(document.querySelectorAll('main img'));
