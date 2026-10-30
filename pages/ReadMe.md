@@ -135,6 +135,12 @@ It shows simple website structure, styling, and useful information of the Butche
 
         Added responsive CSS styling
 
+### v1.1.0 (2026-10-30)
+- Added CSS styling, responsive layout and Google Fonts
+
+### v1.0.0 (2026-10-30)
+- Added  a proper navigation bar and footer
+
      WEBSITE RESPONSIVE DESIGN SNIPPETS:
     ./Assets/image320px
     ./Assets/image678px
