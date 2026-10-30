@@ -753,9 +753,32 @@ a { color: inherit; }
   display: flex;
   gap: 14px;
   margin-top: 8px;
+  flex-wrap: wrap;
 }
 
-.form-actions .btn-gold { flex: 1; }
+.form-actions .btn {
+  flex: 1 1 180px;
+}
+
+.form-actions .btn-gold { flex: 1.2 1 200px; }
+
+.use-saved-details-btn {
+  background: rgba(217, 179, 92, 0.08);
+  color: var(--gold-light);
+  border-color: var(--gold);
+  text-transform: uppercase;
+}
+
+.use-saved-details-btn:hover {
+  background: rgba(217, 179, 92, 0.14);
+  border-color: var(--gold-light);
+  color: var(--cream);
+}
+
+.use-saved-details-btn:disabled,
+.use-saved-details-btn[hidden] {
+  display: none;
+}
 
 .form-note {
   text-align: center;
@@ -765,7 +788,19 @@ a { color: inherit; }
   display: none;
 }
 
-.form-note.visible { display: block; }
+.saved-details-note {
+  display: block;
+  width: 100%;
+  margin-top: 4px;
+  color: var(--gold-light);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.saved-details-note[hidden] {
+  display: none;
+}
 
 /* ---------------- Footer ---------------- */
 
@@ -1005,7 +1040,7 @@ fieldset.field.invalid { border-color: #e57373; }
 .form-note.error { color: #ff9d9d; }
 
 /* --- Fix: the rating buttons (JS now adds "selected", which this file already styles) --- */
-.rating-btn:focus-visible { outline: 2px solid var(--gold); outline-offset: 2px; }
+.rating-btn:focus-visible { outline: 2px solid var(--gold); }
 
 /* --- Form confirmation panel --- */
 .form-success {

@@ -294,7 +294,7 @@ const FORMS = {
   }
 };
 
-/** Shows (or clears) the error text under a field and marks it visually. */
+/** Shows the error text under a field and marks it visually. */
 function setFieldError(control, message) {
   const wrapper = control.closest('.field');
   if (!wrapper) return;
@@ -334,9 +334,97 @@ function initForms() {
   });
 }
 
+function getSavedUserProfile() {
+  try {
+    const saved = JSON.parse(localStorage.getItem('lunathiCustomerProfile') || '{}');
+    return {
+      name: String(saved.name || '').trim(),
+      email: String(saved.email || '').trim(),
+      mobile: String(saved.mobile || '').trim()
+    };
+  } catch (error) {
+    return { name: '', email: '', mobile: '' };
+  }
+}
+
+function saveUserProfile(form) {
+  const profile = {
+    name: form.querySelector('#name')?.value.trim() || '',
+    email: form.querySelector('#email')?.value.trim() || '',
+    mobile: form.querySelector('#mobile')?.value.trim() || ''
+  };
+
+  if (!profile.name && !profile.email && !profile.mobile) return;
+
+  try {
+    localStorage.setItem('lunathiCustomerProfile', JSON.stringify(profile));
+  } catch (error) {
+    console.warn('Could not save saved user details:', error);
+  }
+}
+
+function populateSavedUserProfile(form) {
+  const profile = getSavedUserProfile();
+  const fields = [
+    { id: 'name', value: profile.name },
+    { id: 'email', value: profile.email },
+    { id: 'mobile', value: profile.mobile }
+  ];
+
+  fields.forEach(({ id, value }) => {
+    const control = form.querySelector('#' + id);
+    if (!control) return;
+    if (value) control.value = value;
+  });
+}
+
+function addUseSavedDetailsButton(form) {
+  const actionRow = form.querySelector('.form-actions');
+  if (!actionRow) return;
+
+  let button = form.querySelector('.use-saved-details-btn');
+  if (!button) {
+    button = document.createElement('button');
+    button.type = 'button';
+    button.className = 'btn btn-outline use-saved-details-btn';
+    button.textContent = 'Use saved details';
+    actionRow.insertBefore(button, actionRow.firstChild);
+  }
+
+  let note = form.querySelector('.saved-details-note');
+  if (!note) {
+    note = document.createElement('small');
+    note.className = 'saved-details-note';
+    note.textContent = 'Saved details available';
+    actionRow.appendChild(note);
+  }
+
+  const profile = getSavedUserProfile();
+  const hasSaved = Boolean(profile.name || profile.email || profile.mobile);
+  button.hidden = !hasSaved;
+  button.disabled = !hasSaved;
+  note.hidden = !hasSaved;
+
+  button.addEventListener('click', () => {
+    populateSavedUserProfile(form);
+    saveUserProfile(form);
+    const firstInput = form.querySelector('#name, #email, #mobile');
+    if (firstInput && typeof firstInput.focus === 'function') firstInput.focus();
+  });
+}
+
 function setupForm(form, config) {
   const note = form.querySelector('.form-note');
   const successPanel = document.getElementById('form-success');
+
+  addUseSavedDetailsButton(form);
+
+  ['name', 'email', 'mobile'].forEach((id) => {
+    const control = form.querySelector('#' + id);
+    if (!control) return;
+    control.addEventListener('input', () => saveUserProfile(form));
+    control.addEventListener('change', () => saveUserProfile(form));
+  });
 
   // Shows a message under the form; type is 'error' or 'ok'.
   const showNote = (text, type) => {
@@ -425,6 +513,7 @@ function setupForm(form, config) {
 
     // 3. Keep a copy in this browser (a simple log of what was submitted).
     saveLocally(data);
+    saveUserProfile(form);
 
     // 4. Build the email and hand it to the visitor's email app.
     const mailtoLink = buildMailto(config.subject, reference, data);
