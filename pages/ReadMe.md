@@ -162,9 +162,19 @@ It shows simple website structure, styling, and useful information of the Butche
     ./Assets/image320px
     ./Assets/image678px
     
-## Improvements from part 2 feedbaCK
+## Improvements from part 2 feedbacK
     Refrencing is provided in ReadMe file
     Added more content to the website
+
+## Immprovements from part 3 feedback
+
+ Add more content
+ Missing navigation links on other pages   
+ Comments added in HTML, CSS and JavaScript 
+ Make good use of semantic elements  header, nav, main, section, article, fieldset, figure and footer used 
+ README must contain all documentation  
+ References must be provided   
+ Regular commits 
 ## PART3 CHANGELOG
     
     Edit the index.html file to update homepage content.
