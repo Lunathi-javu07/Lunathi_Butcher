@@ -160,6 +160,19 @@ It shows simple website structure, styling, and useful information of the Butche
     Added javascript form validation rules for the user input.
     Added a feedback functionality for the form submission.
     Applied a proper css layout for the enquiry form.
+    Added gallery lightbox (keyboard accessible)
+    Added menu search alongside the category filter
+    Added date stamp, open/closed badge and live footer clock with automatic year
+    Added email (mailto) processing, confirmation panel and reference number to both forms
+    Added dropdown, checkbox, radio and date controls to the forms
+    Added per-field validation messages
+    Added meta description and keywords to every page
+    Renamed images with SEO-friendly names and improved alt text
+    Fixed: menu filter did nothing (missing `.hidden` style)
+    Fixed: form messages were invisible (class name mismatch)
+    Fixed: rating buttons did not highlight (class name mismatch)
+    Fixed: missing image on the menu page
+    Moved README to the repository root
 
 ## Mobile
 <img width="325" height="811" alt="Mobile" src="https://github.com/user-attachments/assets/0f3059b3-970b-47f6-96af-7a7722862546" />
